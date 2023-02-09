@@ -1,0 +1,52 @@
+p{
+    color: rgba(26, 25, 25, 0.911);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration:none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align:justify;
+    margin-left: 2rem;
+    margin-right: 4rem;
+
+}
+h2{
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+h3{
+   color: black;
+   font-size: 22px;
+   font-weight: 700;
+   text-decoration: none;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   text-align: center;
+}
+.answers > a{
+    color: rgba(0, 0, 0, 0.904);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration:none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 4rem;
+    padding-bottom: 1rem;
+    display: block;
+}
+.answers > a:hover{
+   color: black;
+   font-size: 1.6rem;
+}
+.answers{
+    display: block;
+    width: 75%;
+
+}
