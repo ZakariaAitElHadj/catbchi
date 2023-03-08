@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"  content="cat,cats,catquiz"/>
+    <meta name="description" content=" ">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./answers.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5773504779994610"
+     crossorigin="anonymous"></script>
+    <title>Cat quiz</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #title{
+        text-align: center;
+        padding: 0.8rem 0;
+        font-size: 3rem;
+        color: rgb(65, 70, 56);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .questions{
+        margin: 3rem auto;
+        width: 90vw;
+        padding: 2rem;
+        background: rgba(0, 255, 221, 0.233);
+        cursor: default;
+        border-radius: 1rem;
+    }
+    #question{
+        margin-bottom: 1rem;
+    }
+    .option{
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        border-bottom: solid 0.1rem rgba(0, 0, 255, 0.493);
+        width: 15rem;
+        background: lightblue;
+        border-radius: 1rem;
+    }
+    .option:hover{
+        color: white;
+    }
+    #answer{
+        margin-top: 2.5rem;
+    }
+    #stat{
+        margin-top: 1.5rem;
+        color: rgb(6,17,168);
+    }
+    .buttons{
+        text-align: center;
+    }
+    button{
+        padding: 0.2rem 1.5rem;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        border-radius: 1.5rem;
+        color: green;
+        background: rgba(230,230,250,0.77);
+    }
+    button:active{
+        background: lavender;
+    }
+    #scoreboard,#answerBank{
+        width: 20rem;
+        background: rgba(230,230,250,0.77);
+        padding: 2rem;
+        text-align: center;
+        margin: auto;
+        position: relative;
+        top: 5rem;
+        display: none;
+    }
+    #score-title{
+        margin: 1rem 0;
+    }
+    #score-btn,#check-answer{
+        margin-top: 1rem;
+    }
+    #score{
+        font-size: 2.5rem;
+    }
+    #answerBank li{
+        text-align: left;
+        margin-bottom: 0.2rem;
+        font-size: larger;
+    }
+    #answers{
+        margin-top: 1rem;
+    }
+    #RButton{
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+    }
+</style>
+<body>
+
+    <div class="header">
+        <div class="header__left">
+          <a class="header__title" > CatBchi </a>
+        </div> 
+        <div class="header__center" >
+            <div class="header__option">
+                <a class="header__option__input" href="./cat-breeds.html">Cat Breeds</a>
+            </div> 
+            <div class="header__option">
+                <a class="header__option__input" href="./cat-food.html">Cat Food</a>
+            </div>   
+            <div class="header__option">
+                <a class="header__option__input" href="./top-facts-to-know-about-cats.html">Top 10</a>
+            </div> 
+        </div>  
+        <div class="header__right">
+            <div class="header__option"> 
+                <a class="header__option__input" href="./index.html">Home</a>
+            </div> 
+        </div>   
+    </div>
+
+    <h1 id="title">Test Your Knowledge About Cats With Those Cat Questions </h1>
+
+    <!-- quiz-container -->
+    <div id="quiz-container">
+        <!-- question container -->
+        <div class="questions">
+            <h2 id="question"></h2>
+            <ol type="A">
+                <li class="option"><span id="option0" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option1" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
+            </ol>
+            <h3 id="stat"></h3>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="next">Next</button>
+        </div>
+
+    </div>
+
+    <!-- scoreboard section -->
+    <div id="scoreboard">
+        
+        <h2 id="score-title">Your Score</h2>
+        <h2 id="score"></h2>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+        <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
+    </div>
+
+    <!-- answers section -->
+    <div id="answerBank">
+        <h2>Answers :</h2>
+        <ol type="1" id="answers">
+
+        </ol>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+    </div>
+    <br><br>
+
+
+    <!-- javascript file source -->
+    <script type="text/javascript" src ="quiz.js"></script>
+
+</body>
+</html>
